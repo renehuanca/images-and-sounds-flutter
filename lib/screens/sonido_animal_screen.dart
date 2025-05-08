@@ -15,11 +15,11 @@ class _SonidoAnimalScreenState extends State<SonidoAnimalScreen> {
   Map<String, Map<String, String>> datosAnimal = {
     'gato': {
       'image': 'assets/images/gato.png',
-      'sound': 'assets/sounds/gato.mp3',
+      'sound': 'sounds/gato.mp3',
     },
     'perro': {
       'image': 'assets/images/perro.png',
-      'sound': 'assets/sounds/perro.mp3',
+      'sound': 'sounds/perro.mp3',
     },
   };
 
@@ -50,7 +50,7 @@ class _SonidoAnimalScreenState extends State<SonidoAnimalScreen> {
   void buscarAnimal() {
     String nombreAnimal = controlText.text;
     if (datosAnimal.containsKey(nombreAnimal)) {
-      _player.play(AssetSource(datosAnimal[nombreAnimal]!['sound']!)); // viene con problemas probar sin esto
+      _player.play(AssetSource(datosAnimal[nombreAnimal]!['sound']!)); // comentar
       // ! = va haber algo que se va reproducir
       setState(() {
         animalActual = nombreAnimal;
