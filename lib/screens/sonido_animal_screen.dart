@@ -31,7 +31,7 @@ class _SonidoAnimalScreenState extends State<SonidoAnimalScreen> {
       ),
       body: Column(
         children: [
-          Text('Escribe el nomre del animal gato o perro'),
+          Text('Escribe el nombre del animal gato o perro'),
           TextField(
             controller: controlText,
           ),
